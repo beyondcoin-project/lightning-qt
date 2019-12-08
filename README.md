@@ -3,7 +3,7 @@
 ![lightning-qt screenshot](screenshot.png)
   
 ## What is it ?
-lightning-qt is a Python plugin for [C-lightning](https://github.com/ElementsProject/lightning), a [Lightning Network](https://github.com/beyondcoin-project/beyondcoin/tree/master/src/qt) daemon. It enables the use of a [beyondcoin-qt](https://github.com/beyondcoin-project/beyondcoin/tree/master/src/qt)-like Graphical User Interface (actually, part of the icons and forms have been taken from beyondcoin-qt and modified) via the RPC interface.  
+lightning-qt is a Python plugin for [C-lightning](https://github.com/beyondcoin-project/lightning), a [Lightning Network](https://github.com/beyondcoin-project/beyondcoin/tree/master/src/qt) daemon. It enables the use of a [beyondcoin-qt](https://github.com/beyondcoin-project/beyondcoin/tree/master/src/qt)-like Graphical User Interface (actually, part of the icons and forms have been taken from beyondcoin-qt and modified) via the RPC interface.  
   
 ## Why ?
 Currently lightning does not have a GUI, and I think that having one which looks like beyondcoin-qt is great for people coming from [beyondcoin-core](https://github.com/beyondcoin-project/beyondcoin), which most of the C-Lightning users do (or have at least ever used beyondcoin-qt). Having it directly available from the RPC is also quite convenient.  
@@ -15,7 +15,7 @@ lightning-cli install_plugin lightning-qt
 ```
 Otherwise the traditional solution :  
 ```bash
-git clone https://github.com/darosior/lightning-qt && cd lightning-qt
+git clone https://github.com/beyondcoin-project/lightning-qt && cd lightning-qt
 pip3 install -r requirements.txt
 chmod a+x lightning-qt.py
 # And just start lightningd like
@@ -23,14 +23,14 @@ lightningd --plugin=lightning-qt.py
 ```
 You can also add `lightning-qt` directly in the default `plugins` directory so that it is automatically loaded on startup :
 ```bash
-git clone https://github.com/darosior/lightning-qt ~/.lightning/plugins/lightning-qt
+git clone https://github.com/beyondcoin-project/lightning-qt ~/.lightning/plugins/lightning-qt
 python3 -m pip install ~/.lightning/plugins/lightning-qt/requirements.txt
 chmod a+x ~/.lightning/plugins/lightning-qt/lightning-qt.py
 lightningd
 ```
 Or you can even start it dynamically like (C-lightning v0.7.2 and above) :
 ```bash
-git clone https://github.com/darosior/lightning-qt && cd lightning-qt
+git clone https://github.com/beyondcoin-project/lightning-qt && cd lightning-qt
 pip3 install -r requirements.txt
 chmod a+x lightning-qt.py
 # And just start lightningd like
